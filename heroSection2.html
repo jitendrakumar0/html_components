@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="assets/libs/owl/js/jquery.min.js"></script>
+
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- <link href="./assets/css/swiper.min.css" rel="stylesheet"> -->
+
+    <link href="./assets/css/style.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- <h1 class="heading">This is Heading</h1>
+    <h1 class="title">This is Title</h1>
+    <h1 class="subTitle">This is Sub Title</h1>
+    <p class="content">This is paragraph</p> -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Responsive navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3 mt-lg-0" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid heroSection heroSection2">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-10 mx-auto">
+                    <div class="heroSectionContent h-100">
+                        <div class="  text-center"><span class="subtitleHero"> Welcome SEO ZIM</span> </div>
+                        <div class="headingHero  text-center text-uppercase"> DISCOVER THE HIDDEN ALTER EGO
+                          OF YOUR BODY</div>
+                        <div class="contentHero  text-center mt-3">Lorem Repellendus labore fugit accusamus rerum praesentium quod a odio corporis similique, omnis veniam debitis error quaerat libero ipsam voluptas placeat culpa tempora ullam consequuntur quidem recusandae vitae autem temporibus? Exercitationem possimus illum dolor? Ab assumenda nulla aliquam, repellendus laborum ullam ducimus et. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur impedit modi nihil! Commodi, architecto voluptas?</div>
+                        <div class="buttonSection mt-4 d-flex align-items-center  justify-content-center">
+                          <div class="button_su mt-lg-3 mt-2 aos-init aos-animate" data-aos="fade-up" data-aos-duration="3000">
+                            <span class="su_button_circle desplode-circle" style="left: 63.3368px; top: -10.0313px;">
+                            </span>
+                            <a href="#" class="button_su_inner">
+                              <span class="button_text_container">
+                                Read More
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./assets/libs/swiper/swiper-bundle.min.js"></script> -->
+
+    
+      <!-- button  -->
+
+    <script>
+        $( ".button_su_inner" ).mouseenter(function(e) {
+   var parentOffset = $(this).offset(); 
+  
+   var relX = e.pageX - parentOffset.left;
+   var relY = e.pageY - parentOffset.top;
+   $(this).prev(".su_button_circle").css({"left": relX, "top": relY });
+   $(this).prev(".su_button_circle").removeClass("desplode-circle");
+   $(this).prev(".su_button_circle").addClass("explode-circle");
+
+});
+
+$( ".button_su_inner" ).mouseleave(function(e) {
+
+     var parentOffset = $(this).offset(); 
+
+     var relX = e.pageX - parentOffset.left;
+     var relY = e.pageY - parentOffset.top;
+     $(this).prev(".su_button_circle").css({"left": relX, "top": relY });
+     $(this).prev(".su_button_circle").removeClass("explode-circle");
+     $(this).prev(".su_button_circle").addClass("desplode-circle");
+
+});
+</script>
+  </body>
+</html>
