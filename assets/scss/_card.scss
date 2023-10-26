@@ -1,0 +1,828 @@
+
+// card Section Start
+    .cardSection{
+    background-color: aliceblue;
+        & .mainCard{
+            border-radius: 10px;
+            padding: 25px;
+                & .inner{
+                    transition: all .3s ease-in-out;
+                    & .cardIcon{
+                        height: 70px;
+                        width: 85px;
+                        margin-top: -43px;
+                        margin-right: -41px;
+                        object-fit: contain;
+                        @include xl{
+                            height: 80px;
+                            width: 90px;
+                        }
+                        @include xxl{
+                            height: 85px;
+                            width: 100px;
+                        }
+                    }
+                    & .head{
+                        font-size: 15px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        opacity: 0.8;
+                        letter-spacing: 0.5;
+                    }
+                    & .subHead{
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 120%;
+                        padding-top: 35px;
+                        transition: all .3s ease-in-out;
+                        @include xl{
+                            font-size: 24px;
+                        }
+                    }
+                    & .description{
+                        font-size: 15px;
+                        line-height: 24px;
+                        padding-top: 20px;
+                        @include xl{
+                            font-size: 16px;
+                            line-height: 28px;
+                        }
+                        @include xxl{}
+                    }
+                    & .rightArrow{
+                        height: 15px;
+                        width: 15px;
+                        margin-top: 30px;
+                        filter: brightness(0);
+                        transition: all .3s ease-in-out;
+                        @include lg{
+                            margin-top: 20px;
+                        }
+                        @include xl{
+                            margin-top: 30px;
+                        }
+                    }
+            }
+                    &:hover{
+                        & .inner{
+                            transform: translateY(-10px);
+                        }
+                        & .subHead{
+                            color: $theme1;
+                        }
+                        & .rightArrow{
+                            filter: none;
+                        }
+                    }
+        }
+    }
+// card Section Ends
+
+// cardHover Section start
+    .cardHoverSection{
+        & .cards{
+            & .cardOne{
+                margin-right: 0;
+                transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+                background-color: #fff;
+                position: relative;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+                @include xxl{
+                    margin-right: 25px;
+                }
+                & .cardIcon{
+                    position: absolute;
+                    padding: 16px;
+                    width: 100%;
+                    opacity: 0;
+                    top: 0;
+                    margin-bottom: 10px;
+                    & .clockIcon{
+                        float: right;
+                        & .cardTime{
+                            font-size: 13px;
+                            font-weight: 500;
+                            color: $theme1;
+                        }
+                    }
+                }
+                & .cardImg{
+                    background-image: url(../img/card011.jpeg);
+                    visibility: hidden;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    height: 235px;
+                    border-top-left-radius: 12px;
+                    border-top-right-radius: 12px;
+                }
+                & .cardLink{
+                    & .cardImgHover{
+                        background-image: url(../img/card011.jpeg);
+                        transition: 0.2s all ease-out;
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        position: absolute;
+                        height: 235px;
+                        border-top-left-radius: 12px;
+                        border-top-right-radius: 12px;
+                        top: 0;
+                    }
+                }
+                & .cardInfo{
+                    z-index: 2;
+                    background-color: #fff;
+                    border-bottom-left-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                    padding: 0px 24px 24px 24px;
+                    & .cardCategory{
+                        text-transform: uppercase;
+                        font-size: 13px;
+                        letter-spacing: 2px;
+                        font-weight: 500;
+                        color: #868686;
+                    }
+                    & .cardTitle{
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 110%;
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                        @include xl{
+                            font-size: 22px;
+                        }
+                        @include xxl{
+                            font-size: 25px;
+                        }
+                    }
+                    & .cardBy{
+                        font-size: 12px;
+                        font-weight: 500;
+                        & .cardAuthor{
+                            font-weight: 600;
+                            text-decoration: none;
+                            color: $theme1;
+                        }
+                    }
+                    & .descrption{
+                        font-size: 16px;
+                        opacity: 0;
+                        visibility: hidden;
+                        position: absolute;
+                        transition: all .3s ease-in-out;
+                        @include ellipsis(6);
+                    }
+                }
+                &:hover{
+                    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+                    transform: scale(1.10, 1.10);
+                    & .cardImg{
+                        display: none;
+                    }
+                    & .cardImgHover{
+                        height: 100%;
+                        opacity: 0.5;
+                        filter: blur(5px);
+                    }
+                    & .cardInfo{
+                        background-color: transparent;
+                        position: relative;
+                    }
+                    & .cardIcon{
+                        opacity: 1;
+                        position: static;
+                    }
+                    & .descrption{
+                        opacity: 1;
+                        visibility: visible;
+                        position: static;
+                    }
+                }
+            }
+        }
+    }
+// cardHover Section Ends
+
+// cardThree Section start
+    .cardThreeSection{
+        & .mainCard{
+            padding: 60px 40px;
+            position: relative;
+            transition: all .3s ease-in-out;
+            & .icon{
+                height: 50px;
+                width: 50px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background-color: rgba(231,15,71,0.03);
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 50%;
+                }
+            }
+            & .Cardheading{
+                font-size: 18px;
+                font-weight: 700;
+                @include sm{
+                    font-size: 20px;
+                }
+                @include md{
+                    font-size: 22px;
+                }
+                @include lg{
+                    font-size: 25px;
+                }
+            }
+            & .description{
+                font-size: 16px;
+            }
+            & .cardButton{
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: all .3s ease-in-out
+                ;
+                & .cardbtnbtn{
+                    background-color: #e70f47;
+                    color: $white;
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding: 10px 20px;
+                    transition: all .5s ease-in-out;
+                    &:hover{
+                        background-color: $black;
+                    }
+                }
+            }
+            &:hover{
+                & .cardButton{
+                    bottom: 0;
+                    padding-bottom: 10px;
+                    & .cardbtnbtn{
+                        
+                    }
+                }
+            }
+        }
+    }
+// cardThree Section Ends
+
+// cardFour Section start
+    .cardFourSection{
+        & .mainCard{
+            padding: 30px 20px;
+            transition: all .3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            @include sm{
+                padding: 40px 25px;
+            }
+            @include md{
+                padding: 50px 30px;
+            }
+            @include lg{
+                padding: 60px 40px;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                height: 30%;
+                top: 20%;
+                left: 0;
+                width: 5px;
+                background-color: #e70f47;
+                transition: all .5s ease-in-out;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                height: 0%;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 5px;
+                background-color: #e70f47;
+                transition: all .3s ease-in-out;
+            }
+            & .icon{
+                height: 60px;
+                width: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                z-index: 10;
+                padding: 15px;
+                @include sm{
+                    height: 70px;
+                    width: 70px;
+                }
+                @include md{
+                    height: 80px;
+                    width: 80px;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    background-color: #e70f47;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 30% 70% 70% 30% / 30% 58% 42% 70%;
+                }
+                
+            }
+            & .content{
+                & .cardHeading{
+                    font-size: 18px;
+                    font-weight: 700;
+                    @include sm{
+                        font-size: 20px;
+                    }
+                    @include md{
+                        font-size: 22px;
+                    }
+                    @include lg{
+                        font-size: 25px;
+                    }
+                }
+                & .description{
+                    font-size: 15px;
+                    line-height: 150%;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    @include sm{
+                        font-size: 16px;
+                        line-height: 160%;
+                    }
+                    @include md{
+                        font-size: 17px;
+                        line-height: 170%;
+                    }
+                    @include lg{
+                        font-size: 17px;
+                        line-height: 180%;
+                    }
+                    @include xl{
+                        font-size: 18px;
+                        line-height: 200%;
+                    }
+                }
+                & .cardancdiv{
+                    & .cardanc{
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: #e70f47;
+                        transition: all .5s ease-in-out;
+                    }
+                    & .pinkarrow{
+                        height: 20px;
+                        width: 20px;
+                        transition: all .5s ease-in-out;
+                    }
+                    &:hover{
+                        & .cardanc{
+                            color: $black;
+                        }
+                        & .pinkarrow{
+                            filter: brightness(0);
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+            }
+            &:hover{
+                &::after{
+                    height: 100%;
+                }
+            }
+        }
+    }
+// cardFour Section Ends
+
+// card five Section start
+    .blogSection{
+        & .blogCard{
+            box-shadow: 0px 20px 50px #D9DBDF;
+            height: 100%;
+            & .blogImg{
+                aspect-ratio: 5/3;
+                transition: all .3s ease-in-out;
+                display: block;
+                overflow: hidden;
+                & img{
+                    object-fit: cover;
+                    transform: scale3d(1,1,1);
+                    transition: transform 1s ease-in-out;
+                }
+            }
+            & .content{
+                & .cardHeading{
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 118%;
+                    text-transform: capitalize;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    @include md{
+                        font-size: 25px;
+                    }
+                }
+                & .cardDescription{
+                    font-size: 14px;
+                    opacity: 0.8;
+                    line-height: 120%;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            & .cardBtn{
+                & .cardbtnbtn{
+                    position: relative;
+                    display: inline-block;
+                    font-size: 14px;
+                    padding: 8px 12px;
+                    overflow: hidden;
+                    z-index: 1;
+                    color: #fff;
+                    background-color: #006aff;
+                    border: none;
+                    font-weight: 600;
+                    transition: all .3s ease-in-out;
+                    @include md{
+                    padding: 10px 18px;
+                    }
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: $theme2;
+                        transform: scaleX(0);
+                        transform-origin: 0 50%;
+                        transition-property: transform;
+                        transition-duration: 1s;
+                        transition-timing-function: ease-out;
+                        z-index: -1;
+                    }
+                    &:hover{
+                        color: #fff;
+                        &::before{
+                            transform: scaleX(1);
+                            transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+                        }
+                    }
+                }
+            }
+            &:hover{
+                & .blogImg{
+                    & img{
+                        transform: scale3d(1.5,1.5,1);
+                        transition: transform 5s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+// card five Section Ends
+
+// card six start
+    .blogsectionSecond{
+        & .mainCard{
+            position: relative;
+            z-index: 10;
+            & .cardImg{
+                aspect-ratio: 1/1;
+                display: block;
+                overflow: hidden;
+                & img{
+                    object-fit: cover;
+                    transform: scale3d(1,1,1);
+                    transition: transform 1s ease-in-out;
+                }
+            }
+            & .content{
+                padding: 10px 30px;
+                & .threeDiv{
+                    & .threeImg{
+                        & .roundedImg{
+                            height: 35px;
+                            width: 35px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            padding: 3px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: lightgray;
+                            & img{
+                                border-radius: 50%;
+                                overflow: hidden;
+                                display: flex;
+                            }
+                        }
+                        & .roundedImgnegative{
+                            margin-left: -13px;
+                        }
+                    }
+                    & .places{
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                    & .myDropdown{
+                        display: flex;
+                        justify-content: end;
+                        & .myDropdowntoggle{
+                            border: 0;
+                            & .threeDots{
+                                height: 4px;
+                                width: 24px;
+                            }
+                            &::after{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                & .cardHeadingmain{
+                    padding-top: 10px;
+                    & .cardHeading{
+                        font-size: 23px;
+                        font-weight: 600;
+                        color: $black;
+                        transition: all .3s ease-in-out;
+                        &:hover{
+                            color: $theme2;
+                        }
+                    }
+                }
+                & .cardSubHeading{
+                    font-size: 17px;
+                    opacity: 0.8;
+                    font-weight: 500;
+                }
+                & .Downtxt{
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $theme2;
+                }
+                & .heartBlackimg{
+                    height: 15px;
+                    width: 15px;
+                }
+                & .numberHeart{
+                    padding: 6px 8px;
+                    transition: all .3s ease-in-out;
+                    & .numberanc{
+                        color: $black;
+                        & .number{
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                    }
+                    &:hover{
+                        background-color: $theme2;
+                        border-radius: 6px;
+                    }
+                }
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: auto;
+                bottom: 0;
+                left: 0;
+                border-radius: 15px;
+                background-image: linear-gradient(100deg, $white, $theme2);
+                background-repeat: repeat-x;
+                transition: all .5s;
+                width: 100%;
+                height: 100%;
+                z-index: -2;
+            }
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: $white;
+                position: absolute;
+                border-radius: 10px;
+                z-index: -1;
+            }
+            &:hover {
+                &::before {
+                    transform: rotate(2deg) translateX(-8px) translateY(11px);
+                }
+                & .cardImg{
+                    & img{
+                        transform: scale3d(1.5,1.5,1);
+                        transition: transform 5s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+// card six Ends
+
+// card Seven start
+    .cardSevensection{
+        background-color: #f0f8ff;
+        & .mainCard{
+            & .cardImg{
+                aspect-ratio: 7/8;
+            }
+            & .dateTime{
+                font-size: 16px;
+                font-weight: 500;
+                opacity: 0.7;
+                padding-bottom: 10px;
+                padding-top: 20px;
+            }
+            & .section{
+                font-size: 17px;
+                font-weight: 500;
+                opacity: 0.7;
+                padding-bottom: 10px;
+            }
+            & .cardHeading{
+                font-size: 20px;
+                font-weight: 600;
+                padding-bottom: 20px;
+                line-height: 140%;
+                transition: all .3s ease-in-out;
+            }
+            & .description{
+                font-size: 16px;
+                padding-bottom: 20px;
+                opacity: 0.7;
+                line-height: 140%;
+            }
+            & .readbtn{
+                & .readBtnanc{
+                    color: black;
+                    transition: all .3s ease-in-out;
+                    font-weight: 600;
+                    & .arrowIcon{
+                        filter: brightness(0);
+                        display: inline-flex;
+                        transition: all .3s ease-in-out;
+                    }
+                }
+                &:hover{
+                    & .readBtnanc{
+                        color: #e70f47;
+                        & .arrowIcon{
+                            filter: none;
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+            }
+            &:hover{
+                & .cardHeading{
+                    color: #e70f47;
+                }
+            }
+        }
+    }
+// card Seven Ends
+
+// card Eight start
+    .cardeightSection{
+        & .mainCard{
+            & .cardImg{
+                aspect-ratio: 7/8;
+                position: relative;
+                overflow: hidden;
+                & img{
+                    transition: all .3s ease-in-out;
+                }
+            }
+            & .content{
+                width: 100%;
+                background-color: $white;
+                position: absolute;
+                bottom: -40px;
+                z-index: 10;
+                & .cardhead{
+                    padding: 10px;
+                    @include sm{
+                        padding: 10px;
+                    }
+                    @include lg{
+                        padding: 15px;
+                    }
+                    @include xxl{
+                        padding: 20px;
+                    }
+                }
+                @include sm{
+                    left: 30px;
+                    width: 80%;
+                }
+                @include md{
+                    left: 33px;
+                }
+                @include lg{
+                    left: 36px;
+                }
+                @include xl{
+                    left: 33px;
+                }
+                @include xxl{
+                    left: 48px;
+                }
+                & .cardheading{
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: #EF3636;
+                    padding: 5px 0 5px 0 ;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    @include sm{
+                        padding: 10px 0;
+                        font-size: 15px;
+                    }
+                }
+                & .subHeading{
+                    padding: 5px 0 5px 0;
+                    @include sm{
+                        padding: 10px 0 10px 0;
+                    }
+                    @include lg{
+                        padding: 10px 0 10px 0;
+                    }
+                    & .subHeadinganc{
+                        font-size: 14px;
+                        font-weight: 700;
+                        color: $black;
+                        transition: all .3s ease-in-out;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        @include sm{
+                            font-size: 16px;
+                        }
+                        &:hover{
+                            color: #EF3636;
+                        }
+                    }
+                }
+                & .dateTime{
+                    font-size: 14px;
+                    color: $white;
+                    background-color: $black;
+                    padding: 5px 10px 5px 10px;
+                    transition: all .3s ease-in-out;
+                    @include sm{
+                        font-size: 14px;
+                        padding: 10px 20px 10px 20px;
+                    }
+                    & .date{
+                        & .admin{
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                & .cardImg{
+                    & img{
+                        transform: scale(1.1)  rotate(2deg);
+                    }
+                }
+                & .dateTime{
+                    background-color: #EF3636;
+                }
+            }
+        }
+    }
+// card Eight Ends
